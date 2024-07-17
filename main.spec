@@ -1,6 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-
 a = Analysis(
     ['main.py'],
     pathex=['.'],
@@ -32,6 +31,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='icon.png',  # Add this line
 )
 coll = COLLECT(
     exe,
@@ -45,6 +45,6 @@ coll = COLLECT(
 app = BUNDLE(
     coll,
     name='main.app',
-    icon=None,
+    icon='icon.png',  # Add this line
     bundle_identifier=None,
 )
